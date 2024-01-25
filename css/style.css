@@ -1,0 +1,238 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/*variables*/
+:root {
+    --primary-color: #0A3871;
+    --secondary-color: #2058A3;
+    --background-light: #F3F5FC;
+    --background-dark: #D8DFE8;
+    --text-dark: #495057;
+    --text-light: #FFFFFF;
+    --box-shadow-color: rgba(0, 0, 0, 0.08);
+}
+/*utilidades*/
+
+.p_r_0{
+    padding-right: 0 !important;
+}
+
+body{
+    display: flex;
+    background: var(--background-light);  
+   
+}
+
+.container{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+/*Container encriptador*/
+.container__encriptar{
+    margin-inline: 40px;
+    padding: 0;
+    justify-content: center;
+    height: 100%;
+}
+
+.container__encriptar textarea{
+    margin: 40px;
+    border: none;
+    background: none;
+    color: var(--primary-color);
+    font-size: 32px;
+    line-height: 1.5;
+    resize: none;
+}
+.container__encriptar textarea::placeholder{
+    color: var(--primary-color);
+    font-size: 32px;
+    line-height: 1.5;
+}
+.container__encriptar textarea:focus-visible{
+    outline: none;
+}
+#text__info{
+    height: 16px;
+    display: flex;
+    color: var(--text-dark);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 5px 40px;
+    
+}
+
+.container__button{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.btn{
+    border: none;
+    padding: 24px;
+    width: 328px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+.btn__encriptar{
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+.btn__encriptar:hover{
+    background: var(--secondary-color); 
+    color: var(--text-light);
+    transition: 0.3s ease-in-out;
+}
+.btn__encriptar:disabled{
+    background: var(--text-dark); 
+    cursor: auto;
+}
+/*Contenido de rpta*/
+.container__rpta{
+    background: var(--text-light);
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    margin: 40px auto;
+    width: 300px;
+}
+
+/*Container inicial*/
+.container__no__rpta{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__no__rpta label{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    display: flex;
+    text-align: center;
+}
+
+.container__no__rpta p{
+    text-align: center;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+.img__boy{
+    background-image: url('../img/Muñeco.png');
+    width: 336px;
+    height: 304px;
+}
+/*Container respuesta*/
+.container__rpta__info{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.container__rpta__info textarea{
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--text-dark);
+    border: none;
+    resize: none;
+    width: 100%;
+}
+.container__rpta__info textarea:focus-visible{
+    outline: none;
+}
+.container__rpta__info textarea:hover{
+    cursor: auto;
+}
+.btn__info{
+    border-radius: 24px;
+    border: solid 1px var(--primary-color);
+    background: none;
+    color: var(--primary-color);
+}
+
+.btn__info:hover{
+    background: #EBF2FA;
+    transition: 0.3s ease-in-out;
+}
+.btn__info:disabled{
+    background: var(--background-dark);
+    transition: 0.3s ease-in-out;
+    cursor: auto;
+}
+
+/*Descktop First*/
+
+@media screen and (max-width: 800px){
+    body{
+        flex-direction: column;
+        padding-bottom: 20px;
+        height: auto;
+    }
+    .container__button{
+        justify-content: space-between;
+    }
+    .btn{
+        padding: 20px;
+        width: 280px;
+    }
+    .container__rpta{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .container__rpta__info{
+        align-items: center;
+    }
+    .img__boy{
+        display: none;
+    }
+    .container{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    
+    .container__encriptar{
+        margin: 0 auto;
+        width: 100%;
+        padding-top: 10px;
+    }
+    .container__encriptar textarea{
+        margin: 0 auto;
+        width: 100%;
+        font-size: 24px;
+    }
+    .container__encriptar textarea::placeholder{
+        font-size: 24px;
+    }
+
+    .container__button{
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+        margin-top: 5px;
+    }
+    .btn{
+        padding: 15px;
+        width: 150px;
+    }
+    
+    .container__rpta{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .container__rpta__info{
+    }
+    .container__rpta__info textarea{
+        font-size: 20px;
+    }
+}
