@@ -194,6 +194,9 @@ body{
     .img__boy{
         display: none;
     }
+    .p_r_0{
+        padding-right: 40px !important;
+    }
     .container{
         justify-content: center;
     }
@@ -229,8 +232,6 @@ body{
     .container__rpta{
         width: 60%;
         margin: 0 auto;
-    }
-    .container__rpta__info{
     }
     .container__rpta__info textarea{
         font-size: 20px;
