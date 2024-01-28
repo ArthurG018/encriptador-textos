@@ -41,7 +41,9 @@ function copiar() {
 
   txt_encriptar.value = txt_desencriptar.value;
 
-  navigator.clipboard.writeText(txt_desencriptar.value);
+  //navigator.clipboard.writeText(txt_desencriptar.value);
+  txt_desencriptar.select();
+  document.execCommand('copy');
 
   alert('El mensaje fue copiado y pegado con éxito!');
 
